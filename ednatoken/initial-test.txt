@@ -1,0 +1,96 @@
+token - 
+maximum of 1.3 B
+issued supply of 1 B
+
+max@max-ThinkPad-T560:~/dev/eos/eosdev/edna$ cleos get table ednatoken2 EDNA stat
+{
+  "rows": [{
+      "supply": "1000000000.0000 EDNA",
+      "max_supply": "1300000000.0000 EDNA",
+      "issuer": "staker"
+    }
+  ],
+  "more": false
+}
+
+
+stakes -
+staker1, 2, 3, 4 have each staked quantities for the Weekly period (stake_period = 1)
+
+
+max@max-ThinkPad-T560:~/dev/eos/eosdev/edna$ cleos get table ednatoken2 ednatoken2 stakes
+{
+  "rows": [{
+      "stake_id": 0,
+      "stake_account": "staker1",
+      "stake_period": 1,
+      "staked": "200000000.0000 EDNA"
+    },{
+      "stake_id": 1,
+      "stake_account": "staker2",
+      "stake_period": 1,
+      "staked": "66663666.0000 EDNA"
+    },{
+      "stake_id": 2,
+      "stake_account": "staker3",
+      "stake_period": 1,
+      "staked": "88882388.0000 EDNA"
+    },{
+      "stake_id": 3,
+      "stake_account": "staker4",
+      "stake_period": 1,
+      "staked": "200000000.0000 EDNA"
+    }
+  ],
+  "more": false
+}
+
+
+rewards - 
+
+When I calculate the rewards, I get the following calculations and rewards
+
+Weekly Base         : 2000000.0000 EDNA
+Total Stake         : 555546054.0000 EDNA
+Supplied Token      : 1000000000
+Total Shares        : 555546054     (total shares == total stake because it's only weekly)
+Perc Stakedx100     : 0.5555 EDNA  (this is really a percentage)
+Base Payout         : 1111000.0000 EDNA
+Total Payout        : 1111000.0000 EDNA
+Unclaimed Tokens    : 889000.0000 EDNA
+------  Reward  ---------------
+TO      : staker1
+PAYOUT  : 399960.0000 EDNA
+------  Reward  ---------------
+TO      : staker2
+PAYOUT  : 133208.9000 EDNA
+------  Reward  ---------------
+TO      : staker3
+PAYOUT  : 177648.9000 EDNA
+------  Reward  ---------------
+TO      : staker4
+PAYOUT  : 399960.0000 EDNA
+
+
+*******************************************************************************************************************************************
+
+
+First Period: 
+
+Weekly Base         : 2000000.0000 EDNA
+Total Stake         : 60000.0000 EDNA
+Supplied Token      : 100000
+Total Shares        : 90000
+Perc Stakedx100     : 0.6000 EDNA
+Base Payout         : 1200000.0000 EDNA
+Total Payout        : 1200000.0000 EDNA
+Unclaimed Tokens    : 800000.0000 EDNA
+------  Reward  ---------------
+TO      : staker
+PAYOUT  : 266640.0000 EDNA
+------  Reward  ---------------
+TO      : staker1
+PAYOUT  : 399960.0000 EDNA
+------  Reward  ---------------
+TO      : staker2
+PAYOUT  : 533280.0000 EDNA
