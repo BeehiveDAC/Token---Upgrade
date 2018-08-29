@@ -1,2 +1,2 @@
 # Token-Upgrade
-Add staking for awards to the original EDNA Token Contract
+Add staking for Awards to the original EDNA Token Contract
